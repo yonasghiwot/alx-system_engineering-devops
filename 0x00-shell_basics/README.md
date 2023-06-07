@@ -1,2 +1,2 @@
-#writing executable scripts for diffent shell commands
+# writing executable scripts for diffent shell commands
 
