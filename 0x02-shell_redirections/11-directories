@@ -1,2 +1,2 @@
 #!/bin/bash 
-find . -type fd -not -name | wc 
+find . -type fd -not -name | wc -l 
