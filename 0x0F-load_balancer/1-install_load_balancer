@@ -40,7 +40,7 @@ frontend clickviral-tech-frontend
 
 backend clickviral-tech-backend
     balance roundrobin
-    server 445494-web-01 54.173.88.209:80 check
+    server 445494-web-01 54.273.34.169:80 check
     server 445494-web-02 52.91.182.250:80 check
 "
 
