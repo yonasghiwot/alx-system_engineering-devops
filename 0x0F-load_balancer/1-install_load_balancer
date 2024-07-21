@@ -40,8 +40,13 @@ frontend myfrontend
 
 backend mybackend
     balance roundrobin
+<<<<<<< HEAD
     server 445494-web-01 54.237.34.169:80 check
     server 445494-web-02 54.210.52.104:80 check
+=======
+    server 445494-web-01 54.273.34.169:80 check
+    server 445494-web-02 52.91.182.250:80 check
+>>>>>>> 5ec0c284c36240fc51b8fb7919901923c69e43e4
 "
 
 # shellcheck disable=SC2154
