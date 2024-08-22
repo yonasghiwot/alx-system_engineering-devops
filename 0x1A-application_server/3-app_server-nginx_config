@@ -18,10 +18,9 @@ server {
 
         #serve /number_0dd_or_even/ route on AirBnb-_clone_v2
         location /airbnb-dynamic/number_odd_or_even/ {
-        #location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$
-		rewrite /airbnb-dynamic/(.*) $1 break;
-                #include proxy_params;
-                proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+                rewrite /airbnb-dynamic/(.*) $1 break;
+                include proxy_params;
+                proxy_pass http://127.0.0.1:5001/number_odd_or_even;
     }
         #serve AirBnb_clone_v3 API 
         location /api {
