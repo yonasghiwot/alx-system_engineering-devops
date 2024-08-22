@@ -1,0 +1,29 @@
+server {
+    listen 80;
+    server_name 127.0.0.1 54.237.34.169;
+    
+    #Add html header 
+    add_header X-Served-By 445494-web-01;
+    
+    #serve /airbnb-onepage/ route on AirBNB_clone_v2	
+    location /airbnb-onepage/ {
+        include proxy_params;
+	proxy_pass http://localhost:5000/airbnb-onepage/;
+    }
+
+    location /airbnb-dynamic/number_odd_or_even/ {
+        rewrite /airbnb-dynamic/(.*) $1 break;
+        include proxy_params;
+	proxy_pass http://localhost:5001/;
+    }
+
+    location /api/ {
+        include proxy_params;
+	proxy_pass http://localhost:5002/api/;
+    }
+
+    location / {
+        include proxy_params;
+	proxy_pass http://localhost:5003/;
+    }
+}
